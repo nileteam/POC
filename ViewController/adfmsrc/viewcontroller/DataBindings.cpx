@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.10.8" id="DataBindings"
+             SeparateXMLFiles="false" Package="viewcontroller" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/InitiatorPage.jsff" usageId="viewcontroller_InitiatorPagePageDef"/>
+    <page path="/taskDetails1.jspx" usageId="viewcontroller_taskDetails1PageDef"/>
+    <page path="/WEB-INF/Initiator-TaskFlow.xml#Initiator-TaskFlow@onLoad"
+          usageId="viewcontroller_Initiator_TaskFlow_Initiator_TaskFlow_onLoadPageDef"/>
+    <page path="/InitiatorTaskPage.jspx" usageId="viewcontroller_InitiatorTaskPagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="viewcontroller_InitiatorPagePageDef" path="viewcontroller.pageDefs.InitiatorPagePageDef"/>
+    <page id="viewcontroller_taskDetails1PageDef" path="viewcontroller.pageDefs.taskDetails1PageDef"/>
+    <page id="viewcontroller_Initiator_TaskFlow_Initiator_TaskFlow_onLoadPageDef"
+          path="viewcontroller.pageDefs.Initiator_TaskFlow_Initiator_TaskFlow_onLoadPageDef"/>
+    <page id="viewcontroller_InitiatorTaskPagePageDef" path="viewcontroller.pageDefs.InitiatorTaskPagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="ViewController_InitiatorHumanTask" path="viewcontroller.ViewController_InitiatorHumanTask"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

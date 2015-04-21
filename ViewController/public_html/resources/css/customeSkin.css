@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.testskin{
+font-family: Arial;
+
+font-size: 12px;
+padding-left: 50px;
+
+text-align: left;
+color: black;
+background-color: LightGray; 
+
+}
+
+af|button{
+
+background-color: Black; 
+}
+
+.testskintable{
+
+background-color: LightSteelBlue; 
+
+}
